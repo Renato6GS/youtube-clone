@@ -1,0 +1,20 @@
+<HomeIcon fill='#fff' />
+        <HomeIcon stroke='#fff' strokeWidth='10px' />
+
+        <Compass fill='#fff' />
+        <Compass stroke='#fff' strokeWidth='10px' />
+
+        <Shorts fill='#fff' />
+        <Shorts stroke='#fff' strokeWidth='10px' />
+
+        <Library />
+        <Library fill='#fff' playicon='#000' />
+
+        <Subs fill='#fff' iconPlay='#000' />
+        <Subs fill='#000' iconPlay='#fff' />
+
+        <Clock fill='#fff' />
+        <Clock fill='#888' />
+
+        <FlagSolid fill='#fff' />
+        <FlagLight fill='#fff' />
