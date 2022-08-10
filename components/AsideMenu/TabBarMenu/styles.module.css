@@ -1,0 +1,48 @@
+.ulActive {
+  margin: 0;
+  padding: 0;
+  padding-top: 0.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.ul {
+  margin: 0;
+  padding: 0;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.showScrollUl {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.labelInactive {
+  margin: 0;
+  margin-top: 10px;
+}
+
+.separator {
+  width: 95%;
+  border-bottom: 1px solid var(--separator);
+  margin: 8px 0;
+}
+
+.showScrollUl::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+.showScrollUl::-webkit-scrollbar-button {
+  display: none;
+}
+
+.showScrollUl::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.showScrollUl::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 10px;
+}
