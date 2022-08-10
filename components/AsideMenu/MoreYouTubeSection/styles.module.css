@@ -1,0 +1,24 @@
+/* Más de youtube */
+.moreYoutubeImage {
+  width: 20px;
+  height: 20px;
+}
+
+.explorerTitle {
+  color: var(--gray);
+  font-family: 'Roboto Medium';
+  padding-left: 1.6rem;
+  margin: 0.5rem 0 0.5rem;
+  font-size: 0.87rem;
+}
+
+.exploreLabel {
+  margin-left: 0;
+  line-break: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 13px 20px 13px 0;
+  font-family: 'Roboto Medium';
+  font-weight: 500;
+}

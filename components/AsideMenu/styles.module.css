@@ -2,7 +2,7 @@
   height: 100vh;
   padding-top: 65px;
   background-color: var(--light-bg-color-dark);
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 0;
 }

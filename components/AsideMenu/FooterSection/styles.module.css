@@ -1,0 +1,25 @@
+.footerInfoContainer {
+  padding: 1rem 0.8rem 1rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footerLinksContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footerAnchor {
+  color: var(--gray);
+  font-size: 0.8rem;
+  line-height: 18px;
+  margin-right: 10px;
+}
+
+.copyright {
+  line-height: 18px;
+  color: var(--gray-black);
+  font-size: 0.75rem;
+}
