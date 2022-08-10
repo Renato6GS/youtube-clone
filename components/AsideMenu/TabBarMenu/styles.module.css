@@ -1,9 +1,9 @@
-.ul {
+/* .ul {
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-}
+} */
 
 .showScrollUl {
   height: 100%;
@@ -39,7 +39,7 @@
 }
 
 /* LOG IN */
-.logInContainer {
+/* .logInContainer {
   padding: 0.5rem 1.6rem 0.5rem 1.6rem;
 }
 
@@ -49,11 +49,11 @@
   line-height: 20px;
   font-size: 0.87rem;
   margin-bottom: 1rem;
-}
+} */
 /* FIN DE LOG IN */
 
 /* Explorar */
-.explorerTitle {
+/* .explorerTitle {
   color: var(--gray);
   font-family: 'Roboto Medium';
   padding-left: 1.6rem;
@@ -76,29 +76,29 @@
   margin: 13px 20px 13px 0;
   font-family: 'Roboto Medium';
   font-weight: 500;
-}
+} */
 /* Fin del explorar */
 
 /* Explorar más canales */
-.circlePlus {
+/* .circlePlus {
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
-}
+} */
 
 /* Más de youtube */
-.moreYoutubeImage {
+/* .moreYoutubeImage {
   width: 20px;
   height: 20px;
-}
+} */
 
 /* Configuraciones */
-.configImage {
+/* .configImage {
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
   width: 20px;
   height: 20px;
-}
+} */
 
 /* Footer info */
-.footerInfoContainer {
+/* .footerInfoContainer {
   padding: 1rem 0.8rem 1rem 1.6rem;
   display: flex;
   flex-direction: column;
@@ -122,4 +122,4 @@
   line-height: 18px;
   color: var(--gray-black);
   font-size: 0.75rem;
-}
+} */

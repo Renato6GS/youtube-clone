@@ -1,0 +1,5 @@
+.separator {
+  width: 95%;
+  border-bottom: 1px solid var(--separator);
+  margin: 8px 0;
+}
