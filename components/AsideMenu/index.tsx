@@ -11,23 +11,21 @@ import Subs from 'components/Icons/Subs';
 import Library from 'components/Icons/Library';
 import Clock from 'components/Icons/Clock';
 
-function MenuItem({
-  url,
-  children,
-  isActiveButton = false,
-}: {
+interface MenuItemProps {
   url: string;
   children: React.ReactNode;
   isActiveButton?: boolean;
-}) {
+}
+
+function MenuItem({ url, children, isActiveButton = false }: MenuItemProps) {
   const { menu } = useContext(Context);
 
   return (
-    <li className={`${menu ? styles.menuItemActive : styles.menuItem}`}>
+    <li className={`${menu ? styles.menuItemActive : styles.menuItemInactive}`}>
       <Link href={url}>
         <a
-          className={`${menu ? styles.menuItemLinkActive : styles.menuItemLink} ${
-            isActiveButton ? (menu ? styles.buttonActive : styles.button) : ''
+          className={`${menu ? styles.menuItemLinkActive : styles.menuItemLinkInactive} ${
+            isActiveButton ? (menu ? styles.buttonActive : styles.buttonInactive) : ''
           }`}>
           {children}
         </a>
@@ -37,25 +35,28 @@ function MenuItem({
 }
 
 function TabBarMenu() {
+  const { menu } = useContext(Context);
+
   return (
-    <ul className={styles.ul}>
+    <ul className={`${styles.ul} ${menu && styles.showScrollUl}`}>
       <MenuItem url={'/'} isActiveButton={true}>
-        <HomeIcon width={20} height={20} fill='#fff' /> <p className={styles.label}>Principal</p>
+        <HomeIcon width={20} height={20} fill='#fff' /> <p className={`${menu || styles.labelInactive}`}>Principal</p>
       </MenuItem>
       <MenuItem url={'/explore'}>
-        <Compass width={20} height={20} fill='#fff' /> <p className={styles.label}>Explorar</p>
+        <Compass width={20} height={20} fill='#fff' /> <p className={`${menu || styles.labelInactive}`}>Explorar</p>
       </MenuItem>
       <MenuItem url={'/shorts'}>
-        <Shorts width={20} height={20} fill='#fff' /> <p className={styles.label}>Shorts</p>
+        <Shorts width={20} height={20} fill='#fff' /> <p className={`${menu || styles.labelInactive}`}>Shorts</p>
       </MenuItem>
       <MenuItem url={'/subs'}>
-        <Subs /> <p className={styles.label}>Suscripciones</p>
+        <Subs /> <p className={`${menu || styles.labelInactive}`}>Suscripciones</p>
       </MenuItem>
+      {menu ? <span className={styles.separator}></span> : <></>}
       <MenuItem url={'/library'}>
-        <Library /> <p className={styles.label}>Biblioteca</p>
+        <Library /> <p className={`${menu || styles.labelInactive}`}>Biblioteca</p>
       </MenuItem>
       <MenuItem url={'/history'}>
-        <Clock width={20} height={20} fill='#fff' /> <p className={styles.label}>Historial</p>
+        <Clock width={20} height={20} fill='#fff' /> <p className={`${menu || styles.labelInactive}`}>Historial</p>
       </MenuItem>
     </ul>
   );
@@ -65,31 +66,8 @@ export default function AsideMenu() {
   const { menu } = useContext(Context);
 
   return (
-    <aside className={`${styles.asideMenu} ${menu ? styles.active : styles.inactive}`}>
-      {menu ? (
-        <ul className={styles.ulActive}>
-          <MenuItem url={'/'} isActiveButton={true}>
-            <HomeIcon width={20} height={20} fill='#fff' /> <p>Principal</p>
-          </MenuItem>
-          <MenuItem url={'/explore'}>
-            <Compass width={20} height={20} fill='#fff' /> <p>Explorar</p>
-          </MenuItem>
-          <MenuItem url={'/shorts'}>
-            <Shorts width={20} height={20} fill='#fff' /> <p>Shorts</p>
-          </MenuItem>
-          <MenuItem url={'/subs'}>
-            <Subs /> <p>Suscripciones</p>
-          </MenuItem>
-          <MenuItem url={'/library'}>
-            <Library /> <p>Biblioteca</p>
-          </MenuItem>
-          <MenuItem url={'/history'}>
-            <Clock width={20} height={20} fill='#fff' /> <p>Historial</p>
-          </MenuItem>
-        </ul>
-      ) : (
-        <TabBarMenu />
-      )}
+    <aside className={`${styles.asideMenu} ${menu ? styles.activeMenu : styles.inactiveMenu}`}>
+      {menu ? <TabBarMenu /> : <TabBarMenu />}
     </aside>
   );
 }
