@@ -1,9 +1,13 @@
+import { useContext } from 'react';
+import Context from '../../../context/MenuContext';
 import styles from './styles.module.css';
 
 export default function HeaderLeft() {
+  const { handlerMenu } = useContext(Context);
+
   return (
     <section className={styles.headerLeft}>
-      <button className={styles.btn}>
+      <button className={styles.btn} onClick={handlerMenu}>
         <img className={styles.hamburgerMenu} src='icons/menu-2.svg' alt='Menú' />
       </button>
       <a className={styles.logo} href='#'>
