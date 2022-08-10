@@ -11,13 +11,26 @@ import Subs from 'components/Icons/Subs';
 import Library from 'components/Icons/Library';
 import Clock from 'components/Icons/Clock';
 
-function MenuItem({ url, children }: { url: string; children: React.ReactNode }) {
+function MenuItem({
+  url,
+  children,
+  isActiveButton = false,
+}: {
+  url: string;
+  children: React.ReactNode;
+  isActiveButton?: boolean;
+}) {
   const { menu } = useContext(Context);
 
   return (
-    <li className={styles.menuItem}>
+    <li className={`${menu ? styles.menuItemActive : styles.menuItem}`}>
       <Link href={url}>
-        <a className={styles.menuItemLink}>{children}</a>
+        <a
+          className={`${menu ? styles.menuItemLinkActive : styles.menuItemLink} ${
+            isActiveButton ? (menu ? styles.buttonActive : styles.button) : ''
+          }`}>
+          {children}
+        </a>
       </Link>
     </li>
   );
@@ -26,23 +39,23 @@ function MenuItem({ url, children }: { url: string; children: React.ReactNode })
 function TabBarMenu() {
   return (
     <ul className={styles.ul}>
-      <MenuItem url={'/'}>
-        <HomeIcon width={20} height={20} fill='#fff' /> <p>Principal</p>
+      <MenuItem url={'/'} isActiveButton={true}>
+        <HomeIcon width={20} height={20} fill='#fff' /> <p className={styles.label}>Principal</p>
       </MenuItem>
       <MenuItem url={'/explore'}>
-        <Compass width={20} height={20} fill='#fff' /> <p>Explorar</p>
+        <Compass width={20} height={20} fill='#fff' /> <p className={styles.label}>Explorar</p>
       </MenuItem>
       <MenuItem url={'/shorts'}>
-        <Shorts width={20} height={20} fill='#fff' /> <p>Shorts</p>
+        <Shorts width={20} height={20} fill='#fff' /> <p className={styles.label}>Shorts</p>
       </MenuItem>
       <MenuItem url={'/subs'}>
-        <Subs /> <p>Suscripciones</p>
+        <Subs /> <p className={styles.label}>Suscripciones</p>
       </MenuItem>
       <MenuItem url={'/library'}>
-        <Library /> <p>Biblioteca</p>
+        <Library /> <p className={styles.label}>Biblioteca</p>
       </MenuItem>
       <MenuItem url={'/history'}>
-        <Clock width={20} height={20} fill='#fff' /> <p>Historial</p>
+        <Clock width={20} height={20} fill='#fff' /> <p className={styles.label}>Historial</p>
       </MenuItem>
     </ul>
   );
@@ -55,7 +68,7 @@ export default function AsideMenu() {
     <aside className={`${styles.asideMenu} ${menu ? styles.active : styles.inactive}`}>
       {menu ? (
         <ul className={styles.ulActive}>
-          <MenuItem url={'/'}>
+          <MenuItem url={'/'} isActiveButton={true}>
             <HomeIcon width={20} height={20} fill='#fff' /> <p>Principal</p>
           </MenuItem>
           <MenuItem url={'/explore'}>
