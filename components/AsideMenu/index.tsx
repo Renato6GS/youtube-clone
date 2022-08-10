@@ -9,7 +9,7 @@ export default function AsideMenu() {
 
   return (
     <aside className={`${styles.asideMenu} ${menu ? styles.activeMenu : styles.inactiveMenu}`}>
-      {menu ? <TabBarMenu /> : <TabBarMenu />}
+      <TabBarMenu />
     </aside>
   );
 }

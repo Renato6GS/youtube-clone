@@ -1,0 +1,21 @@
+.btnLogIn {
+  width: 100%;
+  max-width: 120px;
+  color: var(--blue);
+  font-family: 'Roboto Medium';
+  font-size: 0.9rem;
+  padding: 6px 12px;
+  background-color: transparent;
+  border: 1.5px solid var(--blue);
+  border-radius: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.userCircle {
+  vertical-align: top;
+  filter: invert(52%) sepia(90%) saturate(1060%) hue-rotate(183deg) brightness(92%) contrast(103%);
+}
