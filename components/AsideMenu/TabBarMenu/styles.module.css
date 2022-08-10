@@ -1,15 +1,6 @@
-.ulActive {
-  margin: 0;
-  padding: 0;
-  padding-top: 0.4rem;
-  display: flex;
-  flex-direction: column;
-}
-
 .ul {
   margin: 0;
   padding: 0;
-  padding-top: 1rem;
   display: flex;
   flex-direction: column;
 }
@@ -66,7 +57,7 @@
   color: var(--gray);
   font-family: 'Roboto Medium';
   padding-left: 1.6rem;
-  margin: 0.5rem 0 0;
+  margin: 0.5rem 0 0.5rem;
   font-size: 0.87rem;
 }
 
@@ -87,3 +78,48 @@
   font-weight: 500;
 }
 /* Fin del explorar */
+
+/* Explorar más canales */
+.circlePlus {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+
+/* Más de youtube */
+.moreYoutubeImage {
+  width: 20px;
+  height: 20px;
+}
+
+/* Configuraciones */
+.configImage {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+  width: 20px;
+  height: 20px;
+}
+
+/* Footer info */
+.footerInfoContainer {
+  padding: 1rem 0.8rem 1rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footerLinksContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footerAnchor {
+  color: var(--gray);
+  font-size: 0.8rem;
+  line-height: 18px;
+  margin-right: 10px;
+}
+
+.copyright {
+  line-height: 18px;
+  color: var(--gray-black);
+  font-size: 0.75rem;
+}

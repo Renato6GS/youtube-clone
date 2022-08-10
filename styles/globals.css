@@ -6,9 +6,10 @@
   --bg-bar-search: #121212;
   --blue: #399aee;
   --white: #fff;
-  --gray-white: #ddd;
-  --separator: #444;
   --gray: rgb(170, 170, 170);
+  --gray-white: #ddd;
+  --gray-black: rgb(113, 113, 113);
+  --separator: #444;
 }
 
 html,
