@@ -1,3 +1,4 @@
+import LogIn from 'components/LogIn';
 import styles from './styles.module.css';
 
 export default function HeaderRight() {
@@ -6,9 +7,10 @@ export default function HeaderRight() {
       <button className={styles.btnDots}>
         <img className={styles.dotsVertical} src='icons/dots-vertical.svg' alt='' />
       </button>
-      <button className={styles.btnLogIn}>
+      {/* <a className={styles.btnLogIn}>
         <img className={styles.userCircle} src='icons/user-circle.svg' alt='' /> ACCEDER
-      </button>
+      </a> */}
+      <LogIn />
     </section>
   );
 }
