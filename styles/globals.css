@@ -10,6 +10,8 @@
   --gray-white: #ddd;
   --gray-black: rgb(113, 113, 113);
   --separator: #444;
+  --border-color-dark: rgba(50, 50, 50, 0.9);
+  --white-opacity: rgba(255, 255, 255, 0.2);
 }
 
 html,
@@ -55,4 +57,30 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   border-radius: 10px;
+}
+
+.swiper-button-next {
+  background-image: url('/icons/chevron-right-white.svg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  z-index: 11 !important;
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev {
+  background-image: url('/icons/chevron-left-white.svg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  z-index: 11 !important;
+}
+
+.swiper-button-prev::after {
+  display: none;
 }
