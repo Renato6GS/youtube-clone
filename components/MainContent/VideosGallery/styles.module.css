@@ -1,0 +1,82 @@
+.videoContent {
+  width: 100%;
+}
+
+.videoAnchor {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.videoIllustration {
+  position: relative;
+}
+
+.videoThumbnail {
+  width: 100%;
+  vertical-align: top;
+  object-fit: cover;
+  max-height: 250px;
+}
+
+.videoDuration {
+  background-color: #000;
+  color: var(--white);
+  width: auto;
+  position: absolute;
+  padding: 3px 6px;
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 18px;
+  bottom: 5px;
+  right: 5px;
+}
+
+.videoInformation {
+  /* background-color: skyblue; */
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+.authorImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.videoDetails {
+  padding-right: 1rem;
+}
+
+.title {
+  display: block;
+  color: var(--white);
+  font-family: 'Roboto Medium';
+  line-height: 22px;
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 45px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.authorName,
+.videoDot {
+  display: block;
+  color: var(--gray);
+  font-size: 0.87rem;
+  line-height: 20px;
+}
+
+.viewsTimes {
+  display: block;
+  color: var(--gray);
+  font-size: 0.87rem;
+  line-height: 20px;
+}
