@@ -10,7 +10,6 @@ import Clock from 'components/Icons/Clock';
 
 import styles from './styles.module.css';
 import Context from 'context/MenuContext';
-import LogIn from 'components/LogIn';
 import ExtendedAsideMenu from '../ExtendedAsideMenu';
 import UlListMenu from '../UlListMenu';
 

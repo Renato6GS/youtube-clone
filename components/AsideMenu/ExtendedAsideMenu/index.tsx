@@ -1,12 +1,9 @@
-import LogIn from 'components/LogIn';
 import ConfigurationSection from '../ConfigurationSection';
 import ExplorerChannelsSection from '../ExplorerChannelsSection';
 import ExplorerYouTubeSection from '../ExplorerYouTubeSection';
 import FooterSection from '../FooterSection';
 import LogInSection from '../LogInSection';
-import MenuItem from '../MenuItem';
 import MoreYouTubeSection from '../MoreYouTubeSection';
-import UlListMenu from '../UlListMenu';
 import styles from './styles.module.css';
 
 export default function ExtendedAsideMenu() {
