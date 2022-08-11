@@ -17,7 +17,6 @@ export const HandlerMenuContext = ({ children }: Props) => {
 
   const handlerMenu = () => {
     setMenu(!menu);
-    console.log(menu);
   };
 
   return <Context.Provider value={{ menu, handlerMenu }}>{children}</Context.Provider>;

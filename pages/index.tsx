@@ -1,8 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
 
-import Layout from 'components/Layout';
+import MainContent from 'components/MainContent';
 
 const Home: NextPage = () => {
   return (
@@ -13,11 +12,7 @@ const Home: NextPage = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <Layout>
-        <div className={styles.slider}>
-          <h1>hola</h1>
-        </div>
-      </Layout>
+      <MainContent />
     </>
   );
 };
